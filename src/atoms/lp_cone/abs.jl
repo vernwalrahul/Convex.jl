@@ -6,7 +6,7 @@
 #############################################################################
 
 import Base.abs
-export abs, abs2
+export abs, square_modulus
 export sign, curvature, monotonicity, evaluate
 
 ### Absolute Value
@@ -60,4 +60,4 @@ function conic_form!(x::AbsAtom, unique_conic_forms::UniqueConicForms)
 end
 
 abs(x::AbstractExpr) = AbsAtom(x)
-abs2(x::AbstractExpr) = square(abs(x))
+square_modulus(x::AbstractExpr) = square(abs(x))
